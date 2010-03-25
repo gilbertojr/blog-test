@@ -1,0 +1,358 @@
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-25 17:54:24) [GET]
+Rendering home/index
+Completed in 43ms (View: 41, DB: 0) | 200 OK [http://localhost/home/index]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-25 18:09:07) [GET]
+Rendering home/index
+Completed in 7ms (View: 6, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (9.6ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.3ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (2.2ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreatePosts (20100325211024)
+  [4;36;1mSQL (0.5ms)[0m   [0;1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "title" varchar(255), "content" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.1ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325211024')[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("posts")[0m
+
+
+Processing HomeController#index (for 127.0.0.1 at 2010-03-25 18:15:40) [GET]
+Rendering home/index
+Completed in 55ms (View: 54, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:15:41) [GET]
+  [4;36;1mPost Load (0.4ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 36ms (View: 32, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-03-25 18:30:58) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 45ms (View: 38, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-03-25 18:31:35) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:31:58) [GET]
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 5ms (View: 1, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-03-25 18:41:05) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 9ms (View: 5, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-03-25 18:41:55) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"UKtciorVk5toIZR8lyMEDE1nWnTlbSt0o0GYGZ0hZQw=", "post"=>{"name"=>"contradicao-interface", "title"=>"A contradição entre interface simples e aparelhos poderosos", "content"=>"Marco Gomes fez uma provocação interessante no seu blog: “Interfaces de objetos modernos são mais complicadas? Estamos ficando mais estúpidos pra projetar as interfaces do dia-a-dia?”\r\n\r\nEu acredito que em alguns dos casos que ele analisou há o erro de comparar coisas diferentes como se fossem iguais. Comparar o telefone de disco com o iPhone é complicado, já que o iPhone é um computador de tamanho reduzido, que entre seus aplicativos tem um telefone. Aí podemos observar o contrário, comparando o iPhone com um computador de antigamente: eu não preciso desligar ou reiniciar quase nunca, ele cabe no meu bolso etc.\r\n\r\nEu acredito que a verdadeira questão seja como lidar com a contradição entre a necessidade de uma interface simples e o aumento do “poder” dos aparelhos. Obviamente eu não tenho resposta nenhuma, mas, assim como o Marco, mais problematização:\r\n\r\nAntes do iPhone eu usava um Motofone F3 (veja aqui meu artigo sobre sua interface). Ele sim, tem uma interface tão simples quanto a de um telefone de disco. Basta digitar o número que você quer e apertar o botão verde. Na verdade, é ainda mais fácil, ele tem 9 posições na agenda relacionadas às nove teclas, basta segurar o botão 1 e ele já liga para aquela pessoa. Não é à toa que ele é apelidado de moto-vô, já que sua simplicidade deu acesso ao celular a pessoas de terceira idade que não enxergavam nem conseguiam usar outros modelos.\r\n\r\nAcredito que as questões fundamentais sejam de mercado, não de burrice do designer. Sempre que eu vejo um design muito ruim feito por uma agência/estudio/profissional bom eu penso: ele deve ter tido meia hora para fazer isso, e com alguém gritando atrás dele.\r\n\r\nO consumidor não pode usar dois ou três aparelhos, falar neles, entrar dados em sua agenda, etc, para comparar antes de comprar. Por isso, sua decisão de compra é baseada na tabela de features. Logo, quanto mais funcionalidades pelo preço mais baixo com um visual bacana, melhor o aparelho. Aí o que acontece é que, na ânsia de entuchar funcionalidades no treco, todas desenvolvidas pelo próprio fabricante, precisando lançar novidades (da moda) rapidamente, e a um preço baixo, o cuidado com a usabilidade vai pro beleléu. Isso sem falar da Obsolescência Programada – eu nem quero imaginar como é estar na pele de um designer que tem que projetar um produto para que ele não dure muito, para que ele se quebre em no máximo 2 anos.\r\n\r\nSobre o exemplo do DVD/Blue Ray, a questão ainda é de mercado. O monopólio dos padrões industriais por um punhado de mega empresas lhes dá um poder tão grande que não há nada que o consumidor possa fazer. Ao contrário da internet, uma plataforma aberta onde qualquer um pode fazer algo mais user-centric que você e ganhar por causa disso, nestes mercados fechados todos os players podem fazer aquilo que quiserem, não há interesse em tornar a vida do consumidor melhor porque ele não tem opção além de comprar um aparelho com aquele padrão.\r\n\r\nA usabilidade está sempre em contradição com o poder do aparelho. Ambas fluem em um movimento contínuo onde cada parte avança sobre a outra. Quanto maior a quantidade de funcionalidades (poder), mais trabalho o designer terá para adequá-las de modo que a interface seja simples. É comum ver saltos de qualidade, como os computadores com interface gráfica e mouse no lugar dos comandos, uma vez que seu sistema se tornou poderoso o suficiente para sustentar tal façanha."}}
+  [4;36;1mPost Create (39.3ms)[0m   [0;1mINSERT INTO "posts" ("name", "updated_at", "title", "content", "created_at") VALUES('contradicao-interface', '2010-03-25 21:41:55', 'A contradição entre interface simples e aparelhos poderosos', 'Marco Gomes fez uma provocação interessante no seu blog: “Interfaces de objetos modernos são mais complicadas? Estamos ficando mais estúpidos pra projetar as interfaces do dia-a-dia?”
+
+Eu acredito que em alguns dos casos que ele analisou há o erro de comparar coisas diferentes como se fossem iguais. Comparar o telefone de disco com o iPhone é complicado, já que o iPhone é um computador de tamanho reduzido, que entre seus aplicativos tem um telefone. Aí podemos observar o contrário, comparando o iPhone com um computador de antigamente: eu não preciso desligar ou reiniciar quase nunca, ele cabe no meu bolso etc.
+
+Eu acredito que a verdadeira questão seja como lidar com a contradição entre a necessidade de uma interface simples e o aumento do “poder” dos aparelhos. Obviamente eu não tenho resposta nenhuma, mas, assim como o Marco, mais problematização:
+
+Antes do iPhone eu usava um Motofone F3 (veja aqui meu artigo sobre sua interface). Ele sim, tem uma interface tão simples quanto a de um telefone de disco. Basta digitar o número que você quer e apertar o botão verde. Na verdade, é ainda mais fácil, ele tem 9 posições na agenda relacionadas às nove teclas, basta segurar o botão 1 e ele já liga para aquela pessoa. Não é à toa que ele é apelidado de moto-vô, já que sua simplicidade deu acesso ao celular a pessoas de terceira idade que não enxergavam nem conseguiam usar outros modelos.
+
+Acredito que as questões fundamentais sejam de mercado, não de burrice do designer. Sempre que eu vejo um design muito ruim feito por uma agência/estudio/profissional bom eu penso: ele deve ter tido meia hora para fazer isso, e com alguém gritando atrás dele.
+
+O consumidor não pode usar dois ou três aparelhos, falar neles, entrar dados em sua agenda, etc, para comparar antes de comprar. Por isso, sua decisão de compra é baseada na tabela de features. Logo, quanto mais funcionalidades pelo preço mais baixo com um visual bacana, melhor o aparelho. Aí o que acontece é que, na ânsia de entuchar funcionalidades no treco, todas desenvolvidas pelo próprio fabricante, precisando lançar novidades (da moda) rapidamente, e a um preço baixo, o cuidado com a usabilidade vai pro beleléu. Isso sem falar da Obsolescência Programada – eu nem quero imaginar como é estar na pele de um designer que tem que projetar um produto para que ele não dure muito, para que ele se quebre em no máximo 2 anos.
+
+Sobre o exemplo do DVD/Blue Ray, a questão ainda é de mercado. O monopólio dos padrões industriais por um punhado de mega empresas lhes dá um poder tão grande que não há nada que o consumidor possa fazer. Ao contrário da internet, uma plataforma aberta onde qualquer um pode fazer algo mais user-centric que você e ganhar por causa disso, nestes mercados fechados todos os players podem fazer aquilo que quiserem, não há interesse em tornar a vida do consumidor melhor porque ele não tem opção além de comprar um aparelho com aquele padrão.
+
+A usabilidade está sempre em contradição com o poder do aparelho. Ambas fluem em um movimento contínuo onde cada parte avança sobre a outra. Quanto maior a quantidade de funcionalidades (poder), mais trabalho o designer terá para adequá-las de modo que a interface seja simples. É comum ver saltos de qualidade, como os computadores com interface gráfica e mouse no lugar dos comandos, uma vez que seu sistema se tornou poderoso o suficiente para sustentar tal façanha.', '2010-03-25 21:41:55')[0m
+Redirected to http://localhost:3000/posts/1
+Completed in 67ms (DB: 39) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-25 18:41:55) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 39ms (View: 32, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:42:00) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 10ms (View: 6, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-25 18:42:07) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:42:11) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-25 18:42:31) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-25 18:44:06) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 47ms (View: 42, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:44:08) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 10, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:44:34) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 16ms (View: 11, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-25 18:44:37) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.3ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:44:54) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:45:22) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 14ms (View: 10, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:45:40) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:46:11) [GET]
+  [4;35;1mPost Load (0.5ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 54ms (View: 10, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:46:20) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 11, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-25 18:46:30) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 1) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/1]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:46:32) [GET]
+  [4;36;1mPost Load (0.5ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 10ms (View: 6, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-03-25 18:46:35) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-03-25 18:48:39) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"UKtciorVk5toIZR8lyMEDE1nWnTlbSt0o0GYGZ0hZQw=", "post"=>{"name"=>"avon", "title"=>"Avon nas redes sociais, do porta-a-porta para o Social Beauty", "content"=>"Não tenho dúvida de que a Avon é uma das marcas do mundo que mais entende de redes sociais. Começou com vendas porta-a-porta, mas logo chegou a um sistema de vendas diretas no qual as “Avon ladies” vendem produtos para suas amigas. No entanto, desde 1886 quando a empresa foi fundada, o mundo mudou muito.\r\n\r\nA avon sabe que hoje entre as mulheres jovens a melhor maneira de falar com as amigas é através das redes sociais e resolveu facilitar isso criando o conceito Social Beauty. A idéia é criar aplicativos sociais como catálogo no iphone, mini-ecommerce personalizado pelo usuário, fan page no facebook entre outros para incentivar e facilitar a venda de produtos entre amigas. É a estratégia principal da irmã mais nova da marca Avon, a Mark, voltada para jovens, que pretende gastar 50 milhões de dólares em mídias sociais nos próximos anos, segundo o site Happi.com.\r\n\r\nNós na amanaiê temos tido uma boa experiência neste sentido, desde o final de 2008, com o aplicativo MinhaLoja, que criamos para o PagSeguro. A princípio o conceito era de um marketplace simples, no qual um usuário pode instalar o aplicativo no seu perfil no orkut e vender qualquer coisa para seus amigos, que podem comprar usando o PagSeguro. Após um período de testes, quando inserimos uma nuvem de tags no aplicativo, percebemos que entre as tags mais utilizadas só há duas marcas: avon e natura.\r\n"}}
+  [4;35;1mPost Create (0.4ms)[0m   [0mINSERT INTO "posts" ("name", "updated_at", "title", "content", "created_at") VALUES('avon', '2010-03-25 21:48:39', 'Avon nas redes sociais, do porta-a-porta para o Social Beauty', 'Não tenho dúvida de que a Avon é uma das marcas do mundo que mais entende de redes sociais. Começou com vendas porta-a-porta, mas logo chegou a um sistema de vendas diretas no qual as “Avon ladies” vendem produtos para suas amigas. No entanto, desde 1886 quando a empresa foi fundada, o mundo mudou muito.
+
+A avon sabe que hoje entre as mulheres jovens a melhor maneira de falar com as amigas é através das redes sociais e resolveu facilitar isso criando o conceito Social Beauty. A idéia é criar aplicativos sociais como catálogo no iphone, mini-ecommerce personalizado pelo usuário, fan page no facebook entre outros para incentivar e facilitar a venda de produtos entre amigas. É a estratégia principal da irmã mais nova da marca Avon, a Mark, voltada para jovens, que pretende gastar 50 milhões de dólares em mídias sociais nos próximos anos, segundo o site Happi.com.
+
+Nós na amanaiê temos tido uma boa experiência neste sentido, desde o final de 2008, com o aplicativo MinhaLoja, que criamos para o PagSeguro. A princípio o conceito era de um marketplace simples, no qual um usuário pode instalar o aplicativo no seu perfil no orkut e vender qualquer coisa para seus amigos, que podem comprar usando o PagSeguro. Após um período de testes, quando inserimos uma nuvem de tags no aplicativo, percebemos que entre as tags mais utilizadas só há duas marcas: avon e natura.
+', '2010-03-25 21:48:39')[0m
+Redirected to http://localhost:3000/posts/2
+Completed in 26ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-25 18:48:39) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 2) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/2]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:48:41) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 19ms (View: 14, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:49:09) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:49:18) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:49:31) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:49:55) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 18ms (View: 13, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 18:50:09) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 17ms (View: 13, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 19:07:07) [GET]
+  [4;35;1mPost Load (0.6ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 53ms (View: 48, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#new (for 127.0.0.1 at 2010-03-25 19:07:08) [GET]
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 9ms (View: 4, DB: 0) | 200 OK [http://localhost/posts/new]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-03-25 19:07:09) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"UKtciorVk5toIZR8lyMEDE1nWnTlbSt0o0GYGZ0hZQw=", "post"=>{"name"=>"", "title"=>"", "content"=>""}}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 58ms (View: 51, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-03-25 19:07:31) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"UKtciorVk5toIZR8lyMEDE1nWnTlbSt0o0GYGZ0hZQw=", "post"=>{"name"=>"test", "title"=>"nome", "content"=>"content"}}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 15ms (View: 9, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-03-25 19:07:35) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"UKtciorVk5toIZR8lyMEDE1nWnTlbSt0o0GYGZ0hZQw=", "post"=>{"name"=>"teste", "title"=>"nome", "content"=>"content"}}
+Rendering template within layouts/posts
+Rendering posts/new
+Completed in 16ms (View: 8, DB: 0) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#create (for 127.0.0.1 at 2010-03-25 19:07:42) [POST]
+  Parameters: {"commit"=>"Create", "authenticity_token"=>"UKtciorVk5toIZR8lyMEDE1nWnTlbSt0o0GYGZ0hZQw=", "post"=>{"name"=>"teste", "title"=>"nomes", "content"=>"content"}}
+  [4;36;1mPost Create (0.4ms)[0m   [0;1mINSERT INTO "posts" ("name", "updated_at", "title", "content", "created_at") VALUES('teste', '2010-03-25 22:07:42', 'nomes', 'content', '2010-03-25 22:07:42')[0m
+Redirected to http://localhost:3000/posts/3
+Completed in 11ms (DB: 0) | 302 Found [http://localhost/posts]
+
+
+Processing PostsController#show (for 127.0.0.1 at 2010-03-25 19:07:42) [GET]
+  Parameters: {"id"=>"3"}
+  [4;35;1mPost Load (0.2ms)[0m   [0mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/show
+Completed in 7ms (View: 2, DB: 0) | 200 OK [http://localhost/posts/3]
+
+
+Processing PostsController#edit (for 127.0.0.1 at 2010-03-25 19:07:45) [GET]
+  Parameters: {"id"=>"3"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+Rendering template within layouts/posts
+Rendering posts/edit
+Completed in 56ms (View: 51, DB: 0) | 200 OK [http://localhost/posts/3/edit]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 19:07:47) [GET]
+  [4;35;1mPost Load (0.8ms)[0m   [0mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 16ms (View: 12, DB: 1) | 200 OK [http://localhost/posts]
+
+
+Processing PostsController#destroy (for 127.0.0.1 at 2010-03-25 19:07:52) [DELETE]
+  Parameters: {"authenticity_token"=>"UKtciorVk5toIZR8lyMEDE1nWnTlbSt0o0GYGZ0hZQw=", "id"=>"3"}
+  [4;36;1mPost Load (0.3ms)[0m   [0;1mSELECT * FROM "posts" WHERE ("posts"."id" = 3) [0m
+  [4;35;1mPost Destroy (0.3ms)[0m   [0mDELETE FROM "posts" WHERE "id" = 3[0m
+Redirected to http://localhost:3000/posts
+Completed in 9ms (DB: 1) | 302 Found [http://localhost/posts/3]
+
+
+Processing PostsController#index (for 127.0.0.1 at 2010-03-25 19:07:52) [GET]
+  [4;36;1mPost Load (0.6ms)[0m   [0;1mSELECT * FROM "posts" [0m
+Rendering template within layouts/posts
+Rendering posts/index
+Completed in 15ms (View: 11, DB: 1) | 200 OK [http://localhost/posts]
