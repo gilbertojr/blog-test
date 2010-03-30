@@ -13,6 +13,13 @@
   <%=h @post.content %>
 </p>
 
+<h2>Comments</h2>
+	<% @post.comments.each do |c| %>
+		<p>
+			<%=h c.commenter %> diz:  <%= c.body %>
+		</p>
+	<% end %>
 
 <%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path %> |
+<%= link_to "Manage Comments", post_comments_path(@post) %> | <%= link_to 'New comment', new_post_comment_path(@post) %>
