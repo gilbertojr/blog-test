@@ -1,0 +1,9 @@
+<h1>Comments for <%= @post.title %> </h1>
+
+<%= link_to 'New comment', new_post_comment_path(@post) %>
+<%= link_to 'Back to post', @post %>
+
+<% for comment in @comments %>
+<p><%=h comment.commenter %> diz: <%= comment.body %> <br/>
+<%= link_to 'show', post_comment_path(@post, comment) %> | <%= link_to 'edit', edit_post_comment_path(@post, comment)%> | <%= link_to 'Destroy', post_comment_path(@post, comment), :confirm => 'Are you sure?', :method => :delete %></p>
+<% end %>

@@ -1,0 +1,14 @@
+<div id="" class="grid_3 menu">
+
+	<ul>
+		<li><%= link_to 'New post', new_post_path %></li>
+	</ul>
+
+	<h4> lista dos posts </h4>
+
+	<ul>
+		<% @posts.each do |post| %>
+		<li><%= link_to post.title, post %></li>
+		<% end %>
+	</ul>
+</div>
